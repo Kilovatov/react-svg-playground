@@ -37,7 +37,7 @@ class App extends Component {
             };
             this.props.loggedIn(this.currentPlayer);
 
-            this.socket = io('http://localhost:3001', {
+            this.socket = io('https://pacific-retreat-52110.herokuapp.com', {
                 query: `token=${auth0Client.getAccessToken()}`,
             });
 
