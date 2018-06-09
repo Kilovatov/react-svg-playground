@@ -8,7 +8,7 @@ import io from 'socket.io-client';
 const auth0Client = new Auth0Web({
     domain: 'kss.auth0.com',
     clientID: '72Bjd1w7xL7ZBfM64n6n7bp4k2Ul9WVR',
-    redirectUri: 'https://pacific-retreat-52110.herokuapp.com/',
+    redirectUri: 'https://aliens-fight.herokuapp.com/',
     audience: 'https://kilovatov.github.io/react-svg-game/',
     responseType: 'token id_token',
     scope: 'openid profile manage:points',
@@ -37,7 +37,7 @@ class App extends Component {
             };
             this.props.loggedIn(this.currentPlayer);
 
-            this.socket = io('https://pacific-retreat-52110.herokuapp.com', {
+            this.socket = io('https://young-reaches-38631.herokuapp.com/', {
                 query: `token=${auth0Client.getAccessToken()}`,
             });
 
